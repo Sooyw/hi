@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Registration</title>
+<meta charset="utf-8">
+<style type="text/css">
+* {box-sizing: border-box;}
+body {padding: 10px;padding-left: 30px;width: 700px;}
+form { font-family: Arial, sans-serif;padding: 10px; }
+fieldset { width: 500px;border: 5px ridge;padding: 10px;margin-bottom: 10px; }
+input, select { margin-top: 10px;display: inline; }
+.labelclass { float: left;width: 150px;clear: left;text-align: right;padding-right: 10px;margin-top: 10px; }
+</style>
+</head>
+<body>
+
+<form method="get">
+	<h1>Registration</h1>
+	<p>Please fill the following information to create an account.</p><hr>
+
+<div>
+	<fieldset>
+		<legend>User Information</legend>
+		<label class="labelclass"><b>First Name:</b></label>
+		<input type="text" name="fname" id="fname" required>
+		<br><br>
+		<label class="labelclass"><b>Last Name:</b></label>
+		<input type="text" name="lname" id="lname" required>
+		<br><br>
+		<label class="labelclass"><b>Country:</b></label>
+		<select size="1" name="country" id="country">
+			<option>Select your country</option>
+			<option value="China">China</option>
+			<option value="Malaysia">Malaysia</option>
+			<option value="Singapore">Singapore</option>
+		</select>
+		<br><br>
+		<label class="labelclass"><b>Gender:</b></label>
+		<label><input type="radio" name="gender" value="male">Male</label>
+		<label><input type="radio" name="gender" value="female">Female</label>
+	</fieldset>
+	<br>
+
+	<fieldset><legend>Login Information</legend>
+
+	<label class="labelclass"><b>Email:</b></label>
+	<input type="email" name="email" id="email" required>
+	<br><br>
+	<label class="labelclass"><b>Password:</b></label>
+	<input type="password" name="pwd" required>
+	<br><br>
+	<label class="labelclass"><b>Repeat Password:</b></label>
+	<input type="password" name="psw-repeat" required>
+	</fieldset>
+
+	<label><input type="checkbox" name="remember">I have read and understand the <a href="#">Terms and Conditions</a>. </label>
+	<br><br>
+
+<input type="submit" value="Sign Me Up!">
+
+</div>
+</form>
+</body>
+</html>
