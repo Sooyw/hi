@@ -6,6 +6,8 @@ header { font-family:"Comic Sans MS", Verdana, sans-serif;
 		background-image: url(background2.jpg); 
 		background-position: center;
 		background-size: cover;
+		background-repeat: no-repeat;
+		background-color: #6495ED;
         font-size: 300%; 
 		padding-top: 50px; padding-bottom: 50px; 
 		text-align: center;}
@@ -14,11 +16,13 @@ main {  display: block;
 		overflow: auto;
         padding: 20px 20px;
         background-image: url(background3.jpg);
-        background-size: cover;}
+        background-size: cover;
+    	background-color: #000000;}
 
 body { font-family:"Comic Sans MS", Verdana, sans-serif;
        background-image: url(background.jpg); 
-       background-size: cover;}
+       background-size: cover; 
+       background-color: #E6E6FA;}
 
 nav {text-align: center; 
 	padding-top: 10px; padding-bottom: 10px; 
@@ -70,7 +74,7 @@ textarea { margin-top: 13px;
 	border: 5px solid #000000;
 	margin: auto;
 	padding-top: 30px;
-box-shadow: 10px 10px 10px #E6E6FA;}
+	box-shadow: 10px 10px 10px #E6E6FA;}
 
 #wrapper {margin: 0 auto; 
 	width: 70%; min-width: 960px; max-width: 960px; 
