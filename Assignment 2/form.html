@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Form</title>
+
+<script>
+	
+function mySubmit(){
+	var name = document.getElementById("nameInput").value;
+	var email = document.getElementById("emailInput").value;
+	var phone = document.getElementById("phoneInput").value;
+
+
+	console.log(name);
+	console.log(email);
+	console.log(phone);
+
+	if (name == "" || email == "" || phone == "") {
+		alert("Please fill in all fields.")
+	}
+
+	else {
+		alert("Thank you.")
+	}
+}
+
+</script>
+
+
+<style type="text/css">
+
+	form {text-align: center; font-weight: bold; word-spacing: 3em;}
+	fieldset {width: 500px; margin: auto;}
+
+</style>
+
+</head>
+
+<body>	
+
+<fieldset>
+<form>
+
+	<br><br>
+	<label>Name</label>
+	<input type="text" id="nameInput">
+	
+	<br><br>
+	<label>Email</label>
+	<input type="text" id="emailInput">
+
+	<br><br>
+	<label>Phone</label>
+	<input type="text" id="phoneInput">
+
+	<br><br><br>
+	<input type="submit" onclick="mySubmit()">
+
+</form>
+</fieldset>
+
+</body>
+</html>

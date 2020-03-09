@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Lunch Order</title>
+
+<script>
+
+
+function calculate (){
+			var total = 0
+			var pasta, pizza, burger, salad, waffle, coffee, tea, milk, juice, smoothie;
+
+
+			pasta = document.getElementById("pasta").checked;
+
+			pizza = document.getElementById("pizza").checked;
+
+			burger = document.getElementById("burger").checked;
+
+			salad = document.getElementById("salad").checked;
+
+			waffle = document.getElementById("waffle").checked;
+
+			coffee = document.getElementById("coffee").checked;
+
+			tea = document.getElementById("tea").checked;
+
+			milk = document.getElementById("milk").checked;
+
+			juice = document.getElementById("juice").checked;
+
+			smoothie = document.getElementById("smoothie").checked;
+
+			console.log(pasta);
+			console.log(pizza);
+			console.log(burger);
+			console.log(salad);
+			console.log(waffle);
+			console.log(coffee);
+			console.log(tea);
+			console.log(milk);
+			console.log(juice);
+			console.log(smoothie);
+
+
+			if (pasta == "" && pizza == "" && burger == "" && salad == "" && waffle == "") {
+			alert("Please select one item from the Food section.")
+			}
+
+			if (coffee == "" && tea == "" && milk == "" && juice == "" && smoothie == "") {
+			alert("Please select one item from the Beverage section.")
+			}
+
+			
+			if (pasta == true) {total = total + 8;}
+
+			if (pizza == true) {total = total + 10;}
+
+			if (burger == true) {total = total + 7;}
+
+			if (salad == true) {total = total + 5;}
+
+			if (waffle == true) {total = total + 6;}
+
+			if (coffee == true) {total = total + 3;}
+
+			if (tea == true) {total = total + 2;}
+
+			if (milk == true) {total = total + 5;}
+
+			if (juice == true) {total = total + 7;}
+
+			if (smoothie == true) {total = total + 8;}
+
+			tax = (6/100) * total;
+
+			document.write("<table border=1>");
+			document.write("<tr>");
+			document.write("<td>" + "Total: " + total + "</td>");
+			document.write("<td>" + " Tax: " + tax.toFixed(2) + "</td>");
+			document.write("<td>" + " Grand total: " + (total+tax) + "</td>");
+			document.write("</tr>");
+			document.write("</table>");
+}
+
+
+</script>
+
+
+<style type="text/css">
+
+form {width: 650px; margin: auto;}
+
+#food {width: 300px; float: left;}
+#beverage {width: 300px; float: right;}
+#submit {margin-top: 20px; margin-left: 5px;}
+
+</style>
+
+</head>
+
+<body>	
+
+
+<form>
+	<fieldset>
+	<br>
+	<label>Lunch Menu</label>
+
+	<br><br>
+	
+	<div id="food">
+	<fieldset>
+
+	<label>Food</label>
+	<br><br>
+	<input type="checkbox" id="pasta"> Pasta (RM 8)
+ 	
+	<br><br>
+	<input type="checkbox" id="pizza"> Pizza (RM 10)
+
+	<br><br>
+	<input type="checkbox" id="burger"> Burger (RM 7)
+
+	<br><br>
+	<input type="checkbox" id="salad"> Salad (RM 5)
+
+	<br><br>
+	<input type="checkbox" id="waffle"> Waffle (RM 6)
+
+	</fieldset>
+	</div>
+
+	<div id="beverage">
+	<fieldset>
+
+	<label>Beverage</label>
+	<br><br>
+	<input type="checkbox" id="coffee"> Coffee (RM 3)
+ 	
+	<br><br>
+	<input type="checkbox" id="tea"> Tea (RM 2)
+
+	<br><br>
+	<input type="checkbox" id="milk"> Milk (RM 5)
+
+	<br><br>
+	<input type="checkbox" id="juice"> Juice (RM 7)
+ 
+	<br><br>
+	<input type="checkbox" id="smoothie"> Smoothie (RM 8)
+
+	</fieldset>
+	</div>
+
+	
+	<input type="submit" id="submit" onclick="calculate()">
+
+</fieldset>
+</form>
+
+
+</body>
+</html>

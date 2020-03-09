@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Shape</title>
+
+
+<script>
+	
+function myImage(whichID){
+	console.log(whichID);
+	var result = whichID;
+	if (whichID == "triangle") {alert("You clicked on the triangle.");}
+	else if (whichID == "square") {alert("You clicked on the square.");}
+	else if (whichID == "circle") {alert("You clicked on the circle.");}
+}
+
+</script>
+
+</head>
+
+<body>
+
+<img src="triangle.jpg" width="300px" height="300px" id="triangle" onclick="myImage(this.id)">
+
+<img src="square.jpg" width="300px" height="300px" id="square" onclick="myImage(this.id)">
+
+<img src="circle.jpg" width="300px" height="300px" id="circle" onclick="myImage(this.id)">
+
+</body>
+</html>
