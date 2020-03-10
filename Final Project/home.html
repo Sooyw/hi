@@ -1,62 +1,68 @@
 <!DOCTYPE html> 
 <html lang="en">
 <head>
-<title>Hot Songs</title>
+<title>Kamam Restaurant</title>
 <meta charset="utf-8">
+<link rel="icon" type="image/x-icon" href="favicon.ico">
 <style>
 
 *{box-sizing: border-box;}
 
-body { font-family:"Comic Sans MS", Verdana, sans-serif;
+body { font-family: "Brush Script MT", Verdana, sans-serif;
        background-image: url(background7.jpg); 
        background-size: cover;
        background-repeat: no-repeat;
-       background-color: #E6E6FA;}
+       background-color: #6495ED;}
 
-header { font-family:"Comic Sans MS", Verdana, sans-serif;
-		color: #ffffff;
-		background-image: url(background5.jpg);
+header { font-family: "Brush Script MT", Verdana, sans-serif;
+		padding-top: 20px; padding-bottom: 20px;
+		background-image: url(background1.jpg);
 		background-position: bottom;
 		background-size: cover;
 		background-repeat: no-repeat;
 		background-color: #6495ED;
         font-size: 300%; 
-		padding-top: 50px; padding-bottom: 50px; 
 		text-align: center;}
 
 nav {text-align: center; 
-	padding-top: 10px; padding-bottom: 10px; 
-	word-spacing: 5em; 
-	font-weight: bold; 
-	background-color: #5F9EA0; 
-	font-size: 150%;} 
+	padding-top: 5px; padding-bottom: 5px; 
+	word-spacing: 0.8em; 
+	background-color: #000000; opacity: 0.6;
+	font-size: 200%;} 
 
-nav a { text-decoration: none;}
+nav a { text-decoration: none; padding: 5px 30px; }
 nav a:link { color: #ffffff; }
-nav a:visited { color: #eaeaea; }
-nav a:hover { color: #000066; }
+nav a:visited {color: #ffffff; }
+nav a:hover { background-color: #696969; opacity: 0.9;}
+
 
 main {  display: block; 
 		overflow: auto;
         padding: 20px; }
 
-footer { font-size: 50%;
-         text-align: center;
+footer { font-family: "Comic Sans MS", Verdana, sans-serif;
+		text-align: center;
          color: #ffffff;
-		 padding: 1px;
-		 background-color: #5F9EA0;}
+		 padding: 8px;
+		 background-color: #000000; opacity: 0.6;
+		 }
 
-h2, h3 {color: #ffffff;}
+h1 {background-color: #ffffff; opacity: 0.7; padding: 50px;}
 
-p {background-color: #6495ED; color: #000000; padding:15px 20px; font-size: 130%;}
+h2 { font-family: Arial, Verdana, sans-serif;background-color: #ffffff; opacity: 0.6; width: 950px; font-style: italic; font-weight: bold; font-size: 300%; height: 390px; padding: 130px 50px; }
 
-.floatleft {margin-top: 20px; float: left; border: 5px dashed #7FFF00; margin-bottom: 10px;}
-.floatright {margin-top: 20px; float: right;border: 5px dashed #7FFF00; margin-bottom: 10px;}
+h3 {background-color: #000000; color: #ffffff; opacity: 0.7; padding: 10px; width: 950px; font-size: 150%; }
 
-.p1 {float: right; width: 600px; height: 200px; border: 5px ridge #191970; margin-top: 20px; box-shadow: 5px 5px 5px #E6E6FA;}
-.p2 {float: left; width: 600px; height: 200px; border: 5px ridge #191970; margin-top: 20px; box-shadow: 5px 5px 5px #E6E6FA;}
+p { font-family: Arial, Verdana, sans-serif; background-color: #ffffff; opacity: 0.7; font-style: italic; font-weight: bold; font-size: 300%; height: 300px; padding-top: 90px; text-align: center; }
 
-#wrapper {margin: 0 auto; width: 70%; width: 960px; }
+div a {color: #000000;}
+
+#wrapper {margin: 0 auto; width: 70%; width: 1000px; }
+#active {background-color: #696969; opacity: 0.9;}
+
+#p1 {width: 310px; float: left;}
+#p2 {width: 310px; float: left; margin-left: 10px;}
+#p3 {width: 310px; float: left; margin-left: 10px;}
 
 </style>
 </head>
@@ -65,58 +71,61 @@ p {background-color: #6495ED; color: #000000; padding:15px 20px; font-size: 130%
 <div>
 
 <header>
-Hot Songs
+<h1>Kamam Restaurant</h1>
 </header>	
 
 <nav>
-<a href="home.html">Home</a> &nbsp;
-<a href="contact.html">Contact</a>
+<a href="home.html" id="active">Home</a> &nbsp;
+<a href="menu.html">Menu</a> &nbsp;
+<a href="promotion.html">Promotion</a> &nbsp;
+<a href="contact.html">Contact</a> 
 </nav>
 
 <main id="wrapper">
-<h2>Top 3 Hot Songs on The Billboard Hot 100</h2>
-<h3>for the week of 29 February 2020</h3>
+
+<h2>Enjoy your favourite Malaysian cuisine here</h2>
+
+<br><br>
+
+<h3>Signature Dish</h3>
+<br><br><br>
+
 <div>
 
-<a href="https://www.youtube.com/watch?v=UNZqm3dxd2w" target="_blank"><img src="thebox.jpg" height="200" width="300" alt="The Box by Roddy Ricch" class="floatleft"></a>
+<marquee behavior="alternate" height="200" width="950" scrollamount="5" scrolldelay="10">
+<a href="menu.html">
+<img src="food1.jpg" height="200" width="300" alt="Roti Canai">
 
-<p class="p1">
-	<strong>1. &nbsp; The Box by Roddy Ricch</strong><br><br>
-	Roddy Ricch debuted at No. 1 on The Billboard Hot 100 with the song <b>"The Box"</b> from his highly anticipated debut album <em>Please Excuse Me for Being Antisocial</em>.
-</p>
-<br clear="all">
+<img src="food2.jpg" height="200" width="300" alt="Nasi Lemak">
+
+<img src="food3.jpg" height="200" width="300" alt="Curry Noodle">
+
+<img src="food4.jpg" height="200" width="300" alt="Fried Rice">
+</a>
+</marquee>
+
+<br clear="all"><br><br><br><br>
 
 </div>
 
-
 <div>
 
-<a href="https://www.youtube.com/watch?v=l0U7SxXHkPY" target="_blank"><img src="lifeisgood.jpg" height="200" width="300" alt="Life Is Good by Future Featuring Drake" class="floatright" ></a>
+<h3>Promotion</h3>
 
-<p class="p2">
-	<strong>2. &nbsp; Life Is Good by Future Featuring Drake</strong><br><br>
-	<b>"Life Is Good"</b> is the latest joint track of Future and Drake, ranked No. 2 on The Billboard Hot 100, showing that "Life Is Good" when Future and Drake collaborate.
-</p>
-<br clear="all">
+<a href="promotion.html" id="promotion">
+<p id="p1">Free 1 Dessert</p>
 
-</div>
+<p id="p2">Free 1 Beverage</p>
 
-<div>
-
-<a href="https://www.youtube.com/watch?v=wXhTHyIgQ_U" target="_blank"><img src="circles.jpg" height="200" width="300" alt="Circles by Post Malone" class="floatleft"></a>	
-
-<p class="p1">
-	<strong>3. &nbsp; Circles by Post Malone</strong><br><br>
-	<b>"Circles"</b>, the third single from Post Malone's third studio album <em>Hollywood's Bleeding</em> ranked No. 3 on The Billboard Hot 100.
-</p>
-<br clear="all">
+<p id="p3">Birthday Treats</p>
+</a>
 
 </div>
 
 </main>
 
 <footer>
-<h1>&copy; Soo Yeung-Wey ACC1804221</h1>	
+<b>&copy; Soo Yeung-Wey ACC1804221</b>
 </footer>
 
 </div>
