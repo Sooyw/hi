@@ -1,0 +1,259 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+<title>Kamam Restaurant</title>
+<meta charset="utf-8">
+<link rel="icon" type="image/x-icon" href="favicon.ico">
+
+
+<script>
+	
+
+function mySubmit(){
+	var name = document.getElementById("name").value;
+	var email = document.getElementById("email").value;
+	var phone = document.getElementById("phone").value;
+	var guests = document.getElementById("guests").value;
+	var date = document.getElementById("date").value;
+	var time = document.getElementById("time").value;
+	var store = document.getElementById("store").value;
+	var tnc = document.getElementById("tnc").checked;
+
+
+	console.log(name);
+	console.log(email);
+	console.log(phone);
+	console.log(guests);
+	console.log(date);
+	console.log(time);
+	console.log(store);
+	console.log(tnc);
+
+
+	if(store == "Select your local store") 
+		{alert("Please select a local store.")}
+
+	if (!(name == "" || email == "" || phone == "" || guests == "" || guests <= 0 || guests > 200 || date == "" || time == "" || store == "Select your local store") && !(tnc == "")){
+
+
+		document.write("<title>" + "Kamam Restaurant" + "</title>")
+			
+			document.write("<h1>" + "Kamam Restaurant" + "</h1>");
+			document.write("<fieldset>");
+			
+			document.write("<h2>" + "Reservation Details" + "</h2>");
+			
+			document.write("<table width='500' frame=box>");
+			
+			document.write("<tr>");
+			document.write("<td>" + "<b>Name:</b>" + "</td>");
+			document.write("<td>" + name + "</td>");
+			document.write("</tr>");
+			
+			document.write("<tr>");
+			document.write("<td>" + "<b>Email:</b> " + "</td>");
+			document.write("<td>" + email + "</td>");
+			document.write("</tr>");
+
+			
+			document.write("<tr>");
+			document.write("<td>" + "<b>Phone:</b>" + "</td>");
+			document.write("<td>" + phone + "</td>");
+			document.write("</tr>");
+
+			document.write("<tr>");
+			document.write("<td>" + "<b>Number of Guests:</b>" + "</td>");
+			document.write("<td>" + guests + "</td>");
+			document.write("</tr>");
+
+			document.write("<tr>");
+			document.write("<td>" + "<b>Date:</b>" + "</td>");
+			document.write("<td>" + date + "</td>");
+			document.write("</tr>");
+
+			document.write("<tr>");
+			document.write("<td>" + "<b>Time:</b>" + "</td>");
+			document.write("<td>" + time + "</td>");
+			document.write("</tr>");
+
+			document.write("<tr>");
+			document.write("<td>" + "<b>Store:</b>" + "</td>");
+			document.write("<td>" + store + "</td>");
+			document.write("</tr>");
+
+			document.write("</table>");
+			document.write("<br>");
+			document.write("</fieldset>");
+	
+}
+
+}
+
+</script>
+
+
+
+<style>
+
+*{box-sizing: border-box;}
+
+body { font-family: "Brush Script MT", Verdana, sans-serif;
+       background-image: url(background4.jpg); 
+       background-position: right;
+       background-size: cover;
+       background-repeat: no-repeat;
+       background-color: #6495ED;}
+
+header { font-family: "Brush Script MT", Verdana, sans-serif;
+		padding-top: 20px; padding-bottom: 20px;
+		background-image: url(background6.jpg);
+		background-position: center;
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-color: #6495ED;
+        font-size: 300%; 
+		text-align: center;}
+
+h1 {background-color: #ffffff; opacity: 0.7; padding: 50px;}
+
+h2 {font-size: 180%;}
+
+p {font-family: Verdana, sans-serif; font-size: 80%;}
+
+nav {text-align: center; 
+	padding-top: 5px; padding-bottom: 5px; 
+	word-spacing: 0.8em; 
+	background-color: #000000; opacity: 0.8;
+	font-size: 200%;} 
+
+nav a { text-decoration: none; padding: 5px 30px; }
+nav a:link { color: #ffffff; }
+nav a:visited {color: #ffffff; }
+nav a:hover { background-color: #696969; opacity: 0.9;}
+
+
+main {  display: block; 
+		overflow: auto;
+        padding: 20px; }
+
+footer { font-family: "Comic Sans MS", Verdana, sans-serif;
+		text-align: center;
+         color: #ffffff;
+		 padding: 8px;
+		 background-color: #000000; opacity: 0.6;
+		 }
+
+input, select { margin-top: 10px; display: inline; }
+
+form {background-color: #ffffff; opacity: 0.8; padding: 50px; width: 800px; margin: auto; font-size: 150%;}
+
+legend {font-size: 130%;}
+
+fieldset {width: 650px; margin: auto;}
+
+#active {background-color: #696969; opacity: 0.9;}
+
+#terms {font-family: Arial, sans-serif; font-size: 80%;}
+
+.labelclass { float: left; width: 250px; clear: left;text-align: right; padding-right: 10px; margin-top: 3px;}
+
+
+
+</style>
+</head>
+
+<body>
+<div>
+
+<header>
+<h1>Kamam Restaurant</h1>
+</header>	
+
+<nav>
+<a href="home.html">Home</a> &nbsp;
+<a href="menu.html">Menu</a> &nbsp;
+<a href="promotion.html">Promotion</a> &nbsp;
+<a href="reservation.html" id="active">Reservation</a> 
+</nav>
+
+<main>
+
+<form method="get">
+	<h2>Reservation</h2>
+	<p>Make your reservation now.</p><hr>
+
+<div>
+	<fieldset>
+		<legend>Customer Information</legend>
+		<br>
+
+		<label class="labelclass"><b>Name:</b></label>
+		<input type="text" name="name" id="name" required>
+		<br><br>
+
+		<label class="labelclass"><b>Gender:</b></label>
+		<label><input type="radio" name="gender" value="male">Male</label>
+		<label><input type="radio" name="gender" value="female">Female</label>
+		<br><br>
+
+		<label class="labelclass"><b>Email:</b></label>
+		<input type="email" name="email" id="email" required>
+		<br><br>
+
+		<label class="labelclass"><b>Phone:</b></label>
+		<input type="phone" name="phone" id="phone" required>
+		<br><br>
+		</fieldset>
+		<br>
+
+		<fieldset>
+		<legend>Reservation Details</legend>
+		<br>
+
+		<label class="labelclass"><b>Number of Guests:</b></label>
+		<input type="number" id="guests" min="1" max="200" required>
+		<br><br>
+
+		<label class="labelclass"><b>Date:</b></label>
+		<input type="Date" id="date" required>
+		<br><br>
+
+		<label class="labelclass"><b>Time:</b></label>
+		<input type="Time" id="time" required>
+		<br><br>
+
+		<label class="labelclass"><b>Store:</b></label>
+		<select size="1" id="store">
+			<option>Select your local store</option>
+			<option value="Kamam Malacca">Kamam Malacca</option>
+			<option value="Kamam Kuala Lumpur">Kamam Kuala Lumpur</option>
+			<option value="Kamam Penang">Kamam Penang</option>
+			<option value="Kamam Johor">Kamam Johor</option>
+			<option value="Kamam Sabah">Kamam Sabah</option>
+			<option value="Kamam Sarawak">Kamam Sarawak</option>
+		</select>
+		<br><br>
+		
+		</fieldset>
+		<br>
+
+	<label id="terms"><input type="checkbox" name="remember" id="tnc" required>I have read and understand the <a href="tnc.html">Terms and Conditions</a>. </label>
+	<br><br>
+
+<input type="submit" onclick="mySubmit()">
+
+</div>
+</form>
+
+</main>
+
+<footer>
+<b>&copy; Soo Yeung-Wey ACC1804221</b>
+</footer>
+
+</body>
+</html>
+
+
+
+
