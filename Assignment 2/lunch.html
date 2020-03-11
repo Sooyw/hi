@@ -43,14 +43,17 @@ function calculate (){
 			console.log(smoothie);
 
 
-			if (pasta == "" && pizza == "" && burger == "" && salad == "" && waffle == "") {
+			if ((pasta == "" && pizza == "" && burger == "" && salad == "" && waffle == "") && !(coffee == "" && tea == "" && milk == "" && juice == "" && smoothie == "")){
 			alert("Please select one item from the Food section.")
 			}
 
-			if (coffee == "" && tea == "" && milk == "" && juice == "" && smoothie == "") {
+			if ((coffee == "" && tea == "" && milk == "" && juice == "" && smoothie == "") && !(pasta == "" && pizza == "" && burger == "" && salad == "" && waffle == "")) {
 			alert("Please select one item from the Beverage section.")
 			}
 
+			if (coffee == "" && tea == "" && milk == "" && juice == "" && smoothie == "" && pasta == "" && pizza == "" && burger == "" && salad == "" && waffle == "") {
+			alert("Please select at least one food and one beverage.")
+			}
 			
 			if (pasta == true) {total = total + 8;}
 
@@ -74,13 +77,40 @@ function calculate (){
 
 			tax = (6/100) * total;
 
-			document.write("<table border=1>");
+			if (!(pasta == "" && pizza == "" && burger == "" && salad == "" && waffle == "") && !(coffee == "" && tea == "" && milk == "" && juice == "" && smoothie == "")) {
+
+			document.write("<title>" + "Lunch Order" + "</title>")
+			
+			document.write("<fieldset>");
+			
+			document.write("<h2>" + "Order Summary" + "</h2>");
+			
+			
+			document.write("<table width='200' frame=box>");
+			
+			
 			document.write("<tr>");
-			document.write("<td>" + "Total: " + total + "</td>");
-			document.write("<td>" + " Tax: " + tax.toFixed(2) + "</td>");
-			document.write("<td>" + " Grand total: " + (total+tax) + "</td>");
+			document.write("<td>" + "Total Purchase: " + "</td>");
+			document.write("<td>" + "RM " + total + "</td>");
+			document.write("</tr>");
+			
+			document.write("<tr>");
+			document.write("<td>" + "Service Tax (6%): " + "</td>");
+			document.write("<td>" + "RM " + tax.toFixed(2) + "</td>");
+			document.write("</tr>");
+
+			
+			document.write("<tr>");
+			document.write("<td>" + "<b>Grand Total:</b>" + "</td>");
+			document.write("<td>" + "<b>" + "RM " + (total+tax) + "</b>"+ "</td>");
 			document.write("</tr>");
 			document.write("</table>");
+			
+			document.write("<br>");
+			document.write("</fieldset>");
+			
+		}
+
 }
 
 
@@ -88,6 +118,7 @@ function calculate (){
 
 
 <style type="text/css">
+
 
 form {width: 650px; margin: auto;}
 
@@ -153,7 +184,7 @@ form {width: 650px; margin: auto;}
 	</fieldset>
 	</div>
 
-	
+	<br>	
 	<input type="submit" id="submit" onclick="calculate()">
 
 </fieldset>
