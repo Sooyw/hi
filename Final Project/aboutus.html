@@ -4,7 +4,6 @@
 <title>Kamam Restaurant</title>
 <meta charset="utf-8">
 <link rel="icon" type="image/x-icon" href="favicon.ico">
-
 <style>
 
 *{box-sizing: border-box;}
@@ -26,19 +25,9 @@ header { font-family: "Brush Script MT", "Comic Sans MS", sans-serif;
         font-size: 300%; 
 		text-align: center;}
 
-main {  display: block; 
-		overflow: auto;
-        padding: 20px; }
-
-h1 {background-color: #ffffff; opacity: 0.7; padding: 50px;}
-
-h2 {font-size: 180%;}
-
-p {font-family: Verdana, sans-serif; padding: 20px;}
-
 nav {text-align: center; 
 	padding-top: 5px; padding-bottom: 5px; 
-	background-color: #000000; opacity: 0.8;
+	background-color: #000000; opacity: 0.6;
 	font-size: 200%;} 
 
 nav a { text-decoration: none; padding: 5px 30px; margin: 30px;}
@@ -47,6 +36,9 @@ nav a:visited {color: #ffffff; }
 nav a:hover { background-color: #696969; opacity: 0.9;}
 
 
+main {  display: block; 
+		overflow: auto;
+        padding: 20px; }
 
 footer { font-family: "Comic Sans MS", Verdana, sans-serif;
 		text-align: center;
@@ -55,14 +47,30 @@ footer { font-family: "Comic Sans MS", Verdana, sans-serif;
 		 background-color: #000000; opacity: 0.6;
 		 }
 
+h1 {background-color: #ffffff; opacity: 0.7; padding: 50px;}
 
-#div {background-color: #ffffff; opacity: 0.8; padding: 30px; width: 800px; margin: auto; font-size: 150%;}
+#about { font-family: Arial, Verdana, sans-serif;background-color: #ffffff; opacity: 0.6; width: 950px; font-style: italic; font-weight: bold;  height: 390px; padding: 20px; }
 
+h2 {font-size: 200%;}
+
+h3 {background-color: #000000; color: #ffffff; opacity: 0.7; padding: 10px; width: 950px; font-size: 150%; }
+
+p { font-family: Arial, Verdana, sans-serif; background-color: #ffffff; opacity: 0.7; font-style: italic; font-weight: bold; font-size: 300%; height: 300px; padding-top: 90px; text-align: center; }
+
+div a {color: #000000;}
+
+#wrapper {margin: 0 auto; width: 70%; width: 1000px; }
+#active {background-color: #696969; opacity: 0.9;}
+
+#p1 {width: 310px; float: left;}
+#p2 {width: 310px; float: left; margin-left: 10px;}
+#p3 {width: 310px; float: left; margin-left: 10px;}
 
 </style>
 </head>
 
 <body>
+<div>
 
 <header>
 <h1>Kamam Restaurant</h1>
@@ -70,27 +78,52 @@ footer { font-family: "Comic Sans MS", Verdana, sans-serif;
 
 <nav>
 <a href="home.html">Home</a> &nbsp;
-<a href="aboutus.html">About Us</a> &nbsp;
+<a href="aboutus.html" id="active">About Us</a> &nbsp;
 <a href="menu.html">Menu</a> &nbsp;
 <a href="reservation.html">Reservation</a> 
 </nav>
 
-<main>
+<main id="wrapper">
 
-<div id="div">
-	<h2>Terms and Conditions</h2><hr>
+<div id="about">
 
+<h2>About Us</h2>
 <p>
-	1. All information provided must be free from error. <br><br><br>
-	2. Valid email and phone number must be provided. <br><br><br>
-	3. Reservations are available for 2 hours. <br><br><br>
-	4. Kindly be ready to be seated at the time of your reservation. Otherwise please notify us at your earliest convenience. <br><br><br>
-	5. Kamam Restaurant can accomodate a sit down function for up to 200 guests only. <br><br><br>
-	6. All reservations must be made at least 1 hour in advance. <br><br><br>
-	7. All reservations with 30 or more guests must be made at least 72 hours in advance. <br><br><br>
-	8. Management reserves the right to cancel the reservation if it is not in compliance with the terms and conditions.
+	Kamam Restaurant was founded in 1999.
+
+
 </p>
+
+<br><br>
+
+<h3>Signature Dish</h3>
+<br><br><br>
+
+
+<div>
+
+<h3>Promotion</h3>
+
+<a href="promotion.html" id="promotion">
+<p id="p1">Free 1 Dessert</p>
+
+<p id="p2">Free 1 Beverage</p>
+
+<p id="p3">Birthday Treats</p>
+</a>
+
 </div>
+
 </main>
+
+<footer>
+<b>&copy; Soo Yeung-Wey ACC1804221</b>
+</footer>
+
+</div>
 </body>
 </html>
+
+
+
+
