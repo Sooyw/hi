@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Varscope</title>
+</head>
+
+
+
+<body>
+
+<center>
+	<p>Outside myFunction(), name is not defined.</p>
+	<p id=myName01></p>
+	<p id=myName02></p>
+
+	<script>
+		var name = "Mr. Rogers";
+
+		function myFunction(){
+			
+			document.getElementById("myName01").innerHTML = "Name is: " + name;
+			}
+
+			myFunction();
+
+			document.getElementById("myName02").innerHTML = "Name is: " + name;
+
+	</script>
+
+</center>
+
+
+</body>
+</html>

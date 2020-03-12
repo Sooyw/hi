@@ -16,9 +16,9 @@ function mySubmit(){
 	var guests = document.getElementById("guests").value;
 	var date = document.getElementById("date").value;
 	var time = document.getElementById("time").value;
-	var store = document.getElementById("store").value;
+	var outlet = document.getElementById("outlet").value;
 	var tnc = document.getElementById("tnc").checked;
-
+	var remark = document.getElementById("remark").value;
 
 	console.log(name);
 	console.log(email);
@@ -26,14 +26,15 @@ function mySubmit(){
 	console.log(guests);
 	console.log(date);
 	console.log(time);
-	console.log(store);
+	console.log(outlet);
 	console.log(tnc);
+	console.log(remark);
 
 
-	if(store == "Select your local store") 
-		{alert("Please select a local store.")}
+	if(outlet == "Select an outlet") 
+		{alert("Please select an outlet.")}
 
-	if (!(name == "" || email == "" || phone == "" || guests == "" || guests <= 0 || guests > 200 || date == "" || time == "" || store == "Select your local store") && !(tnc == "")){
+	if (!(name == "" || email == "" || phone == "" || guests == "" || guests <= 0 || guests > 200 || date == "" || time == "" || outlet == "Select an outlet") && !(tnc == "")){
 
 
 		document.write("<title>" + "Kamam Restaurant" + "</title>")
@@ -67,23 +68,31 @@ function mySubmit(){
 			document.write("</tr>");
 
 			document.write("<tr>");
-			document.write("<td>" + "<b>Date:</b>" + "</td>");
-			document.write("<td>" + date + "</td>");
-			document.write("</tr>");
-
-			document.write("<tr>");
 			document.write("<td>" + "<b>Time:</b>" + "</td>");
 			document.write("<td>" + time + "</td>");
 			document.write("</tr>");
 
 			document.write("<tr>");
-			document.write("<td>" + "<b>Store:</b>" + "</td>");
-			document.write("<td>" + store + "</td>");
+			document.write("<td>" + "<b>Date:</b>" + "</td>");
+			document.write("<td>" + date + "</td>");
+			document.write("</tr>");
+
+			document.write("<tr>");
+			document.write("<td>" + "<b>Outlet:</b>" + "</td>");
+			document.write("<td>" + outlet + "</td>");
+			document.write("</tr>");
+
+			document.write("<tr>");
+			document.write("<td>" + "<b>Remark:</b>" + "</td>");
+			document.write("<td>" + remark + "</td>");
 			document.write("</tr>");
 
 			document.write("</table>");
 			document.write("<br>");
 			document.write("</fieldset>");
+			document.write("<br>");
+
+			document.write("You have submitted your reservation request, a confirmation email will be sent to the email provided. If you did not receive the email, please contact us at 03-8989-8888.")
 	
 }
 
@@ -97,14 +106,14 @@ function mySubmit(){
 
 *{box-sizing: border-box;}
 
-body { font-family: "Brush Script MT", Verdana, sans-serif;
+body { font-family: "Brush Script MT", "Comic Sans MS", sans-serif;
        background-image: url(background4.jpg); 
        background-position: right;
        background-size: cover;
        background-repeat: no-repeat;
        background-color: #6495ED;}
 
-header { font-family: "Brush Script MT", Verdana, sans-serif;
+header { font-family: "Brush Script MT", "Comic Sans MS", sans-serif;
 		padding-top: 20px; padding-bottom: 20px;
 		background-image: url(background6.jpg);
 		background-position: center;
@@ -143,7 +152,7 @@ footer { font-family: "Comic Sans MS", Verdana, sans-serif;
 		 background-color: #000000; opacity: 0.6;
 		 }
 
-input, select { margin-top: 10px; display: inline; }
+input, select { margin-top: 10px; display: inline;}
 
 form {background-color: #ffffff; opacity: 0.8; padding: 50px; width: 800px; margin: auto; font-size: 150%;}
 
@@ -151,12 +160,14 @@ legend {font-size: 130%;}
 
 fieldset {width: 650px; margin: auto;}
 
+textarea {margin-top: 10px; height: 100px; }
+
 #active {background-color: #696969; opacity: 0.9;}
 
 #terms {font-family: Arial, sans-serif; font-size: 80%;}
 
-.labelclass { float: left; width: 250px; clear: left;text-align: right; padding-right: 10px; margin-top: 3px;}
 
+.labelclass { float: left; width: 250px; clear: left;text-align: right; padding-right: 10px; margin-top: 3px;}
 
 
 </style>
@@ -214,17 +225,17 @@ fieldset {width: 650px; margin: auto;}
 		<input type="number" id="guests" min="1" max="200" required>
 		<br><br>
 
-		<label class="labelclass"><b>Date:</b></label>
-		<input type="Date" id="date" required>
-		<br><br>
-
 		<label class="labelclass"><b>Time:</b></label>
 		<input type="Time" id="time" required>
 		<br><br>
 
-		<label class="labelclass"><b>Store:</b></label>
-		<select size="1" id="store">
-			<option>Select your local store</option>
+		<label class="labelclass"><b>Date:</b></label>
+		<input type="Date" id="date" required>
+		<br><br>
+
+		<label class="labelclass"><b>Outlet:</b></label>
+		<select size="1" id="outlet">
+			<option>Select an outlet</option>
 			<option value="Kamam Malacca">Kamam Malacca</option>
 			<option value="Kamam Kuala Lumpur">Kamam Kuala Lumpur</option>
 			<option value="Kamam Penang">Kamam Penang</option>
@@ -233,7 +244,11 @@ fieldset {width: 650px; margin: auto;}
 			<option value="Kamam Sarawak">Kamam Sarawak</option>
 		</select>
 		<br><br>
-		
+
+		<label class="labelclass"><b>Remark:</b></label>
+		<textarea id="remark"></textarea>
+		<br><br>
+
 		</fieldset>
 		<br>
 

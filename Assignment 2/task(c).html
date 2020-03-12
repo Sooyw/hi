@@ -85,11 +85,11 @@ function calculate (){
 			
 			document.write("<h2>" + "Order Summary" + "</h2>");
 			
-			document.write("<table width='200' frame=box>");
+			document.write("<table width='300' frame=box>");
 			
 			document.write("<tr>");
 			document.write("<td>" + "Total Purchase: " + "</td>");
-			document.write("<td>" + "RM " + total + "</td>");
+			document.write("<td>" + "RM " + total.toFixed(2) + "</td>");
 			document.write("</tr>");
 			
 			document.write("<tr>");
@@ -100,7 +100,7 @@ function calculate (){
 			
 			document.write("<tr>");
 			document.write("<td>" + "<b>Grand Total:</b>" + "</td>");
-			document.write("<td>" + "<b>" + "RM " + (total+tax) + "</b>"+ "</td>");
+			document.write("<td>" + "<b>" + "RM " + (total+tax).toFixed(2) + "</b>"+ "</td>");
 			document.write("</tr>");
 
 			document.write("</table>");
@@ -134,50 +134,50 @@ form {width: 650px; margin: auto;}
 <form>
 	<fieldset>
 	<br>
-	<label>Lunch Menu</label>
+	<label><b>Lunch Menu</b></label>
 
 	<br><br>
 	
 	<div id="food">
 	<fieldset>
 
-	<label>Food</label>
+	<label><b>Food</b></label>
 	<br><br>
-	<input type="checkbox" id="pasta"> Pasta (RM 8)
+	<input type="checkbox" id="pasta"> Pasta (RM 8.00)
  	
 	<br><br>
-	<input type="checkbox" id="pizza"> Pizza (RM 10)
+	<input type="checkbox" id="pizza"> Pizza (RM 10.00)
 
 	<br><br>
-	<input type="checkbox" id="burger"> Burger (RM 7)
+	<input type="checkbox" id="burger"> Burger (RM 7.00)
 
 	<br><br>
-	<input type="checkbox" id="salad"> Salad (RM 5)
+	<input type="checkbox" id="salad"> Salad (RM 5.00)
 
 	<br><br>
-	<input type="checkbox" id="waffle"> Waffle (RM 6)
+	<input type="checkbox" id="waffle"> Waffle (RM 6.00)
 
 	</fieldset>
 	</div>
 
 	<div id="beverage">
 	<fieldset>
-
-	<label>Beverage</label>
+	
+	<label><b>Beverage</b></label>
 	<br><br>
-	<input type="checkbox" id="coffee"> Coffee (RM 3)
+	<input type="checkbox" id="coffee"> Coffee (RM 3.00)
  	
 	<br><br>
-	<input type="checkbox" id="tea"> Tea (RM 2)
+	<input type="checkbox" id="tea"> Tea (RM 2.00)
 
 	<br><br>
-	<input type="checkbox" id="milk"> Milk (RM 5)
+	<input type="checkbox" id="milk"> Milk (RM 5.00)
 
 	<br><br>
-	<input type="checkbox" id="juice"> Juice (RM 7)
+	<input type="checkbox" id="juice"> Juice (RM 7.00)
  
 	<br><br>
-	<input type="checkbox" id="smoothie"> Smoothie (RM 8)
+	<input type="checkbox" id="smoothie"> Smoothie (RM 8.00)
 
 	</fieldset>
 	</div>
