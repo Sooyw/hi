@@ -4,6 +4,27 @@
 <title>Kamam Restaurant</title>
 <meta charset="utf-8">
 <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+<script>
+  
+function mySubmit(){
+
+  var message = document.getElementById("message").value;
+
+  console.log(message);
+ 
+
+  if (message == "") {
+    alert("Please fill in your message.")
+  }
+
+  else {
+    alert("You have submitted your message. Thank you!")
+  }
+}
+
+</script>
+
 <style>
 
 *{box-sizing: border-box;}
@@ -62,14 +83,25 @@ h2 {font-size: 250%; padding-left: 20px;}
 
 h3 {text-align: left; font-size: 150%;}
 
+form {font-size: 150%; font-family: "Comic Sans MS", Arial, sans-serif;}
 
+legend {font-size: 130%; }
+
+input {display: inline; width: 200px; height: 30px;}
+
+textarea {width: 200px; height: 80px;}
 
 #wrapper {margin: 30px auto;  width: 1300px; }
 #active {background-color: #696969; opacity: 0.9;}
-
+#send {float: left; margin-left: 550px;
+  font-family: "Comic Sans MS", Arial, sans-serif;
+  font-weight: bold;
+  background-color: #ADD8E6;
+  color: #008B8B;}
 
 .float {text-align: left; width: 300px; height: 200px; float: left; margin: 20px auto; padding-left: 20px;}
-
+.padding {padding-left: 30px;}
+.labelclass { float: left; width: 550px; clear: left;text-align: right; padding-right: 30px;}
 
 </style>
 </head>
@@ -91,9 +123,45 @@ h3 {text-align: left; font-size: 150%;}
 <main id="wrapper">
 
 <div>
+  
+  <h2 class="padding">Any queries?</h2>
+  <p class="padding">Feel free to contact us using the form below.</p><hr>
+  <br><br>
+
+<form method="get">
+<fieldset>
+    <legend>Contact Us</legend>
+    <br>
+
+    <label class="labelclass"><b>Name:</b></label>
+    <input type="text" name="name" id="name">
+    <br><br>
+
+    <label class="labelclass"><b>Email:</b></label>
+    <input type="email" name="email" id="email">
+    <br><br>
+
+    <label class="labelclass"><b>Subject:</b></label>
+    <input type="text" name="subject" id="subject">
+    <br><br>
+
+    <label class="labelclass"><b>Message:</b></label>
+    <textarea id="message" required></textarea>
+    <br><br>
+
+    <input type="submit" value="Send Message" id="send" onclick="mySubmit()">
+    <br>
+</fieldset>
+</form>
+
+<br><br>
+
+</div>
+
+<div>
 
 <h2>Outlet</h2>
-<br><br>
+
 
 <h3 class="float">Kamam Kuala Lumpur</h3>
 
